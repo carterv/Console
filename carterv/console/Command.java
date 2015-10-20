@@ -1,6 +1,6 @@
 package carterv.console;
 
-public class Command
+public abstract class Command
 {
    Console console;
    
@@ -9,7 +9,14 @@ public class Command
       console = c;
    }
    
+   public Console getConsole()
+   {
+      return console;
+   }
+   
    public abstract String name();
+   
+   public abstract int numArgs();
    
    public abstract String[] argNames();
    
